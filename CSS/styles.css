@@ -193,7 +193,6 @@ footer h5{
 }
 
 .container-main-nosotros h4 {
-    padding-left: 20px;
     grid-area: h4;
 }    
 
@@ -627,10 +626,15 @@ footer h5{
 
     .container-img-index img {
         width: 100%;
+        margin: 0;
     }
     
     .container-img-index img:nth-child(1), .container-img-index img:nth-child(2) {
         display: none;
+    }
+
+    .container-parrafo-index {
+        padding: 20px;
     }
     
     /* Estilos Nosotros */
@@ -639,11 +643,11 @@ footer h5{
         margin: 0 0 30px 0;
     }
     .container-main-nosotros img {
-        display: none;
-    }
+        margin: 20px 0;
+     }
 
     .container-main-nosotros .parrafo-1 {
-        padding: 20px;
+        padding: 50px 0;
     }
 
     /* Estilos Contacto */
