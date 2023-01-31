@@ -584,7 +584,6 @@ footer h5{
         grid-area: total;
     }
 
-    
 }
 
 @media screen and (max-width: 480px) {
@@ -665,6 +664,7 @@ footer h5{
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 5px;
     }
     
     .container-formulario-contacto input, .container-formulario-contacto textarea {
@@ -673,10 +673,6 @@ footer h5{
     
     .container-formulario-contacto label, .container-formulario-contacto input, .container-formulario-contacto textarea {
         text-align: center;
-    }
-    
-    .container-formulario-contacto {
-        gap: 5px;
     }
     
     .container-formulario-contacto label, .container-formulario-contacto .button {
