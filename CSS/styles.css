@@ -66,8 +66,7 @@ header nav ul li a:hover {
 }
 
 main h4 {
-    /* padding: 0 20px; */
-    /* font-family: 'Kalam', cursive; */
+    font-family: 'Kalam', cursive;
     font-size: 1.5rem;
     color: #846B8A;
 }
@@ -92,8 +91,8 @@ footer .container-informacion div{
     text-align: left;
 }
 
-footer .container-informacion div p{
-    /* font-family: 'Kalam', cursive; */
+footer .container-informacion div p:nth-child(2){
+    font-family: 'Kalam', cursive;
     line-height: 1.5;
     font-size: 1.3rem;
 }
@@ -121,17 +120,22 @@ footer .container-redes-sociales ul li a img:hover {
 }
 
 footer h5{
+    font-family: 'Kalam', cursive;
     text-align: center;
     margin: 30px 0;
 }
 
 /* Estilos del HOME */
 
+.container-main-index h4 {
+    display: none;
+}
+
 .container-img-index {
     padding: 0 20px;
 }
 
-.container-img-index ul{
+.container-img-index {
     list-style: none;
     display: flex;
     justify-content: space-around;
@@ -139,11 +143,10 @@ footer h5{
 }
 
 .img-index {
-    width: 430px;
-    /* height: 625px; */
+    width: 30%;
     margin-bottom: 15px;
     border-radius: 40px;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
 }
 
 .img-index:hover {
@@ -158,13 +161,12 @@ footer h5{
 
 .container-parrafo-index p{
     padding: 30px 0;
-    font-size: 20px;
-    /* font-family: 'Kalam', cursive; */
+    font-size: 1.5rem;
+    font-family: 'Kalam', cursive;
     line-height: 2;
 }
 
 /* Estilos Nosotros */
-
 
 .container-main-nosotros {
     padding: 0 20px 20px 20px;
@@ -198,12 +200,14 @@ footer h5{
 .container-main-nosotros .parrafo-1 {
     text-align: center;
     font-size: 1.5rem;
+    font-family: 'Kalam', cursive;
     grid-area: parrafo-1;
 }
 
 .container-main-nosotros .parrafo-2 {
     grid-area: parrafo-2;
     font-size: 1.5rem;
+    font-family: 'Kalam', cursive;
     text-align: center;
     margin-top: 40px;
 }
@@ -213,7 +217,7 @@ footer h5{
 .container-main-contacto {
     padding: 0 20px 20px 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
     "img img img img"
@@ -237,6 +241,7 @@ footer h5{
 .container-main-contacto p {
     grid-area: parrafo;
     font-size: 1.5rem;
+    font-family: 'Kalam', cursive;
 }
 
 .container-formulario-contacto {
@@ -308,6 +313,7 @@ footer h5{
 .container-main-contacto .button {
     grid-area: button;
     justify-self: center;
+    color: #846B8A;
     width: 100px;
     height: 30px;
     background-color: #CFA5B4;
@@ -334,6 +340,7 @@ footer h5{
 .container-img-galeria img {
     width: 350px;
     border-radius: 6px;
+    box-shadow: 2px 3px 10px black;
 }
 
 .container-img-galeria img:hover {
@@ -379,12 +386,14 @@ footer h5{
 .container-producto-tienda img:nth-child(1) {
     width: 200px;
     border-radius: 6px;
+    box-shadow: 2px 3px 10px black;
     grid-area: img;
     margin-bottom: 10px;
 }
 
 .container-producto-tienda p, .container-producto-carrito p {
     font-size: 1.2rem;
+    font-family: 'Kalam', cursive;
 }
 
 .container-producto-tienda p:nth-child(2), .container-producto-carrito p:nth-child(2) {
@@ -437,12 +446,14 @@ footer h5{
 
 .container-total-carrito p {
     margin-bottom: 10px;
+    font-family: 'Kalam', cursive;
 }
 
 .container-total-carrito button {
     background-color: #CFA5B4;
     color: #846B8A;
     font-size: 1.1rem;
+    font-family: 'Kalam', cursive;
     width: 80px;
     height: 30px;
     border: 2px solid #846B8A;
@@ -490,7 +501,6 @@ footer h5{
 
     /* Estilos Home */
     
-
 
     /* Estilos Nosotros */
 
@@ -606,8 +616,23 @@ footer h5{
 
     /* Estilos Home */
 
-    
+    .container-main-index h4 {
+        display: block;
+        margin:0 0 30px 0;
+    }
 
+    .container-img-index {
+        padding: 20px;
+    }
+
+    .container-img-index img {
+        width: 100%;
+    }
+    
+    .container-img-index img:nth-child(1), .container-img-index img:nth-child(2) {
+        display: none;
+    }
+    
     /* Estilos Nosotros */
 
     .container-main-nosotros h4 {
