@@ -30,12 +30,6 @@ header h1 a{
     font-weight: bold;
     text-decoration: none;
 }
-/* 
-nav .navbar .navbar-expand-sm {
-    display: flex;
-    flex-direction: column;
-
-} */
 
 header nav ul {
     margin: 0;
