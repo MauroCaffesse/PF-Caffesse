@@ -26,10 +26,19 @@ header h1:hover {
 header h1 a{
     color: #C98BB9;
     font-family: 'Dancing Script',cursive;
+    font-size: 2.3rem;
+    font-weight: bold;
     text-decoration: none;
 }
+/* 
+nav .navbar .navbar-expand-sm {
+    display: flex;
+    flex-direction: column;
+
+} */
 
 header nav ul {
+    margin: 0;
     list-style: none;
     text-align: right;
 }
@@ -39,16 +48,17 @@ header nav ul li{
     padding-left: 10px;
 }
 
-header nav ul li:hover {
-    transform: scale(1.1);
-    transition: 200ms;
-}
-
-header nav ul li a {
+.navbar-nav .nav-item .nav-link{
+    padding: 0;
     text-decoration: none;
     color: #C98BB9;
     font-family: 'Dancing Script',cursive;
     font-weight: bold;
+}
+
+header nav ul li:hover {
+    transform: scale(1.1);
+    transition: 200ms;
 }
 
 header nav ul li a:hover {
@@ -63,7 +73,7 @@ main h4 {
 }
 
 .current {
-    color: #846B8A;
+    color: #846B8A !important;
 }
 
 footer .container-informacion {
@@ -97,6 +107,7 @@ footer .container-redes-sociales ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    padding: 0;
 }
 
 footer .container-redes-sociales ul li a img {
@@ -355,6 +366,7 @@ footer h5{
 
 .container-producto-tienda, .container-producto-carrito {
     margin: 10px;
+    border-bottom: 2px solid #CFA5B4;
     display: grid;
     grid-template-columns: 85% 15%;
     grid-template-rows: auto;
@@ -369,6 +381,10 @@ footer h5{
     border-radius: 6px;
     grid-area: img;
     margin-bottom: 10px;
+}
+
+.container-producto-tienda p, .container-producto-carrito p {
+    font-size: 1.2rem;
 }
 
 .container-producto-tienda p:nth-child(2), .container-producto-carrito p:nth-child(2) {
@@ -444,12 +460,13 @@ footer h5{
 @media screen and (max-width:1024px) {
     
     /* Estilos generales */
-    header {
+    /* header {
         display: block;
-    }
+    } */
 
     header h1 {
         text-align: left;
+        width: 35%;
     }
 
     header nav {
@@ -513,21 +530,25 @@ footer h5{
     .container-main-galeria h4 {
         padding: 0;
     }
-
+    
     /* Estilos Tienda */
     
     .main-tienda {
         display: block;
     }
-
+    
     .main-tienda section h4 {
         padding: 0;
     }
     
+    .container-producto-tienda p {
+        font-size: 1.5rem;
+    }
+
     .container-aside-carrito {
         display: none;
     }
-
+    
 }
 
 @media screen and (max-width: 480px) {
@@ -535,7 +556,21 @@ footer h5{
     /* Estilos Generales */
 
     header h1 {
-        width: 200px;
+        width: 100%;
+        margin-bottom: 22px;
+        text-align: center;
+    }
+
+    header h1 a {
+        font-size: 1.5rem;
+    }
+    
+    .navbar-nav {
+        align-items: flex-start;
+    }
+
+    .nav-link {
+        margin: 15px 0;
     }
 
     /* Estilos Home */
@@ -600,6 +635,7 @@ footer h5{
 
     /* Estilos Tienda */
     
+
     .container-producto-tienda img:nth-child(1) {
         width: 300px;
     }    

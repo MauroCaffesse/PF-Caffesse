@@ -10,6 +10,9 @@
      <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
     
      <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap" rel="stylesheet">
+
+     <!-- link bt -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     
     <!-- link css -->
     <link rel="stylesheet" href="../CSS/styles.css">
@@ -18,7 +21,37 @@
 <body>
     <header>
         <h1><a href="../index.html">La Pastelería by Cande Leogrande</a></h1>
-        <nav>
+        <nav class="navbar navbar-expand-sm">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#opciones"><span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="opciones">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                       <a class="nav-link" href="../index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link current" href="./nosotros.html">NOSOTROS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contacto.html">CONTACTO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./galeria.html">GALERÍA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./tienda.html">TIENDA</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        
+        
+        
+        
+        <!-- <nav>
             <ul>
                 <li>
                    <a href="../index.html">HOME</a>
@@ -36,7 +69,7 @@
                     <a href="./tienda.html">TIENDA</a>
                 </li>
             </ul>
-        </nav>
+        </nav> -->
     </header>
     <main class="container-main-nosotros">
         <img src="../img/IMG_0340.JPG" alt="nosotros">
@@ -76,6 +109,6 @@
         <h5>Todos los derechos reservados</h5>
     </footer>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
