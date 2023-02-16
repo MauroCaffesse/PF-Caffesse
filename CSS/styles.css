@@ -491,7 +491,8 @@ body {
     padding: 0; }
   body footer .container-informacion {
     display: flex;
-    flex-flow: column wrap; }
+    flex-flow: column wrap;
+    align-items: center; }
     body footer .container-informacion div {
       width: 80%; }
       body footer .container-informacion div p {
