@@ -202,7 +202,7 @@
     display: none; }
   body .container-main-contacto p {
     text-align: center;
-    padding: 1.25rem;
+    padding: 1.25rem 0;
     font-size: 1.3rem; }
   body .container-main-contacto .container-formulario-contacto {
     display: flex;
@@ -449,7 +449,7 @@ body {
     margin-top: 1.875rem;
     list-style: none;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-evenly;
     flex-wrap: wrap; }
     body footer .container-informacion div {
@@ -459,7 +459,7 @@ body {
       body footer .container-informacion div p:nth-child(1) {
         font-weight: bold;
         font-size: 1.55rem; }
-      body footer .container-informacion div p:nth-child(2) {
+      body footer .container-informacion div p:nth-child(2), body footer .container-informacion div p:nth-child(3), body footer .container-informacion div p:nth-child(4), body footer .container-informacion div p:nth-child(5) {
         font-family: "Kalam", cursive;
         line-height: 1.5;
         font-size: 1.3rem; }
