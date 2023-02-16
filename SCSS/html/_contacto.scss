@@ -1,0 +1,155 @@
+@import "../base/variables";
+@import "../base/mixin";
+@import "../base/extend";
+
+.container-main-contacto {
+    padding: 0 $medida-dos $medida-dos $medida-dos;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+    "img img img img"
+    "contac none form form"
+    "parrafo parrafo form form";
+    gap: 2.5rem;
+
+    img {
+        height: 100%;
+        width: 100%;
+        grid-area: img;
+        border: 3px solid #382d3a;
+        border-radius: $medida-dos / 4 $medida-dos;
+    }
+
+    h2 {
+        grid-area: contac;
+    }
+
+    p {
+        grid-area: parrafo;
+        font-size: 1.5rem;
+        font-family: $tipografia-secundaria;
+    }
+
+    .container-formulario-contacto {
+        font-size: 1.8rem;
+        grid-area: form;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "nombre telefono"
+        "nombre-im telefono-im"
+        "ciudad email"
+        "ciudad-im email-im"
+        "mensaje mensaje"
+        "mensaje-im mensaje-im"
+        "button button";
+        gap: 1rem;
+
+        input, textarea {
+            background-color: transparent;
+            border: 1px solid $color-cuatro;
+            border-radius: 1rem;
+            outline: none;
+            font-family: $tipografia-secundaria;
+            font-size: 1.1rem;
+        }
+
+        .nombre {
+            grid-area: nombre;
+        }
+        
+        .nombre-im {
+            grid-area: nombre-im;
+        }
+        
+        .telefono {
+            grid-area: telefono;
+        }
+        
+        .telefono-im {
+            grid-area: telefono-im;
+        }
+        
+        .ciudad {
+            grid-area: ciudad;
+        }
+        
+        .ciudad-im {
+            grid-area: ciudad-im;
+        }
+        
+        .email {
+            grid-area: email;
+        }
+        
+        .email-im {
+            grid-area: email-im;
+        }
+        
+        .mensaje {
+            grid-area: mensaje;
+        }
+        
+        .mensaje-im {
+            grid-area: mensaje-im;
+        }
+        
+        .button {
+            grid-area: button;
+            justify-self: center;
+            color: #846B8A;
+            width: 6.25rem;
+            height: $medida-uno;
+            background-color: $color-dos;
+            border: 2px solid $color-cinco;
+            border-radius: 0.4rem;
+        } 
+    }
+}
+
+/* mediaqueries contacto */
+
+@media screen and (max-width: 1024px) {
+    body {
+        .container-main-contacto {
+            display: block;
+
+            img, h2, p {
+                margin-bottom: $medida-uno;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        .container-main-contacto {
+            img {
+                display: none;
+            }
+            p {
+                text-align: center;
+                padding: $medida-dos;
+                font-size: 1.3rem;
+            }
+            .container-formulario-contacto {
+                @include flex;
+                flex-direction: column;
+                gap: $medida-dos / 4;
+                label {
+                    text-align: center;
+                    margin-top: 1.56rem;
+                }
+                input, textarea {
+                    width: 80%;
+                    text-align: center;
+                }
+                .button {
+                    margin-top: 1.56rem;
+                }
+            }
+        }
+    }
+}

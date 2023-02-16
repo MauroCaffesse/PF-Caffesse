@@ -1,0 +1,51 @@
+@import "base/variables";
+@import "base/extend";
+@import "base/mixin";
+
+.container-main-galeria {
+    h2 {
+        padding-left: $medida-dos;
+    }
+
+    .container-img-galeria {
+        padding: $medida-uno / 3 $medida-dos $medida-dos $medida-dos;
+        width: 100%;
+        @include flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: $medida-dos;
+        
+        img {
+            width: 21.875rem;
+            border-radius: 0.375rem;
+            box-shadow: 2px 3px 10px black;
+        }
+
+        img:hover {
+            @extend %transformacion-uno;
+        }
+    }
+}
+
+/* mediaqueries galeria */
+
+@media screen and (max-width: 1024px) {
+    body {
+        .container-main-galeria {
+            h2 {
+                padding: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        .container-img-galeria {
+            padding: $medida-dos;
+            img {
+                width: 80vw;
+            }
+        }
+    }
+}
